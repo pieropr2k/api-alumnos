@@ -1,4 +1,4 @@
-org: pieropilco
+org: organizacion
 service: api-alumnos
 
 provider:
@@ -6,7 +6,7 @@ provider:
   runtime: python3.12
   timeout: 30
   iam:
-    role: arn:aws:iam::902996284231:role/LabRole
+    role: arn:aws:iam::123456789101:role/LabRole
 
 functions:
   listar:
