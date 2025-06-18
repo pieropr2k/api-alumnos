@@ -1,4 +1,4 @@
-# API REST `api-alumnos` con AWS Lambda y usando Serverless Framework**
+# API REST `api-alumnos` con AWS Lambda y usando Serverless Framework
 
 ### **Objetivo**
 
@@ -217,7 +217,7 @@ functions:
 
 ![alt text](img/serverless_creado.JPG)
 
-![alt text](serverless_api.JPG)
+![alt text](img/serverless_api.JPG)
 
 5. Sigue verificar todos endpoints.
 
