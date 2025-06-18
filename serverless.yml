@@ -28,10 +28,10 @@ functions:
           integration: lambda
 
   obtener:
-    handler: ObtenerAlumno.lambda_handler
+    handler: BuscarAlumno.lambda_handler
     events:
       - http:
-          path: /alumnos/obtener
+          path: /alumnos/buscar
           method: post   # podrías usar GET con query params, pero POST es más simple para body JSON
           cors: true
           integration: lambda
