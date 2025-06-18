@@ -126,7 +126,7 @@ A continuación, se describen las 5 funciones Lambda que conforman el sistema:
 Se definió un archivo `serverless.yml` para orquestar todo el despliegue con Serverless Framework, asignando un `IAM Role` con permisos suficientes para DynamoDB.
 
 ```yaml
-org: pieropilco
+org: pieropr
 service: api-alumnos
 
 provider:
