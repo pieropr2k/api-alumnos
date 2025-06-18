@@ -4,9 +4,10 @@ service: api-alumnos
 provider:
   name: aws
   runtime: python3.12
-  timeout: 30  
+  timeout: 30
   iam:
     role: arn:aws:iam::902996284231:role/LabRole
+
 functions:
   listar:
     handler: ListarAlumnos.lambda_handler
@@ -17,5 +18,38 @@ functions:
           cors: true
           integration: lambda
 
+  crear:
+    handler: CrearAlumno.lambda_handler
+    events:
+      - http:
+          path: /alumnos/crear
+          method: post
+          cors: true
+          integration: lambda
 
+  obtener:
+    handler: ObtenerAlumno.lambda_handler
+    events:
+      - http:
+          path: /alumnos/obtener
+          method: post   # podrías usar GET con query params, pero POST es más simple para body JSON
+          cors: true
+          integration: lambda
 
+  actualizar:
+    handler: ActualizarAlumno.lambda_handler
+    events:
+      - http:
+          path: /alumnos/actualizar
+          method: put
+          cors: true
+          integration: lambda
+
+  eliminar:
+    handler: EliminarAlumno.lambda_handler
+    events:
+      - http:
+          path: /alumnos/eliminar
+          method: delete
+          cors: true
+          integration: lambda
